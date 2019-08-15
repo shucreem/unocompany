@@ -1,0 +1,5 @@
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^(www\scala\.ne\.jp)$ [NC] 
+RewriteRule (.*) http://www.scala.ne.jp%{REQUEST_URI} [R=301,L] 
+RewriteCond %{HTTP_HOST} ^(www\.scala\.ne\.jp)$ [NC] 
+RewriteRule (.*) http://scala.ne.jp%{REQUEST_URI} [R=301,L]
