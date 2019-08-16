@@ -74,7 +74,10 @@
 		$question_06 = htmlspecialchars($_SESSION['question_06']);
 		$question_07 = htmlspecialchars($_SESSION['question_07']);
 		$question_08 = htmlspecialchars($_SESSION['question_08']);
-
+		$question_06=$_SESSION['question_06'];
+				foreach ($question_06 as $value){
+					$q_06 .=$value.",";
+				}
 		$f_name = htmlspecialchars($_SESSION['f_name']);
 		$l_name = htmlspecialchars($_SESSION['l_name']);
 		$f_name_kana = htmlspecialchars($_SESSION['f_name_kana']);
@@ -196,10 +199,6 @@
 		  		<h3>「ブログ名」を除く、メルマガや有料サービス、競馬情報を利用したことはありますか？<span>＊複数回答可</span></h3>
 		  	</div>';
 			echo '<div class="input_area">';
-				$question_06=$_POST['question_06'];
-				foreach ($question_06 as $value){
-					$q_06 .=$value.",";
-				}
 			echo $q_06;
 			// echo $_POST['question_06'];
 			echo '<!--input_area--></div>';
