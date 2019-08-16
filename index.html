@@ -230,7 +230,7 @@ $(function(){
 
 			<div class="form-group">
 			 	<label for="inputAge">年齢<span class="text-warning">※</span></label>
-			 	<input type="number" class="form-control validate[required,custom[number]]" id="age" name="age" required />
+			 	<input type="text" pattern="\d*" class="form-control validate[required,custom[number]]" id="age" name="age" required />
 			</div>
 
 			<div class="form-group">
@@ -251,7 +251,7 @@ $(function(){
 			 <div class="form-row">
 				<div class="form-group col-md-2">
 					<label for="inputZip">郵便番号<span class="text-warning">※</span></label>
-					<input type="number" class="form-control validate[required]" id="zip" name="zip" placeholder="1600004" onKeyUp="AjaxZip3.zip2addr(this,'','pref01','addr01','','', false);" required />
+					<input type="text" pattern="\d*" class="form-control validate[required,custom[number]]" id="zip" name="zip" placeholder="1600004" onKeyUp="AjaxZip3.zip2addr(this,'','pref01','addr01','','', false);" required />
 				</div>
 
 			    <div class="form-group col-md-4">

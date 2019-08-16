@@ -5,7 +5,8 @@
 	header('Location: /');
 	}
 	session_start();
-	if(isset($_POST['question_01'],$_POST['question_02'],$_POST['question_03'],$_POST['question_04'],$_POST['question_05'],$_POST['question_06'],$_POST['question_07'],$_POST['question_08'],$_POST['f_name'],$_POST['l_name'],$_POST['f_name_kana'],$_POST['l_name_kana'],$_POST['age'],$_POST['job'],$_POST['zip'],$_POST['tel'],$_POST['email'],$_POST['email2'],$_POST['address'],$_POST['pref01'],$_POST['addr01'],$_POST['addr02'],$_POST['addr03'],$_POST['privacy'])){
+	if(isset($_POST['privacy'])){
+
 	$_SESSION['question_01'] = $_POST['question_01'];
 	$_SESSION['question_02'] = $_POST['question_02'];
 	$_SESSION['question_03'] = $_POST['question_03'];
@@ -73,11 +74,6 @@
 		$question_06 = htmlspecialchars($_SESSION['question_06']);
 		$question_07 = htmlspecialchars($_SESSION['question_07']);
 		$question_08 = htmlspecialchars($_SESSION['question_08']);
-		
-		$question_06 = $_POST['question_06'];
-				foreach ($question_06 as $value){
-					$q_06 .=$value.",";
-				};
 
 		$f_name = htmlspecialchars($_SESSION['f_name']);
 		$l_name = htmlspecialchars($_SESSION['l_name']);
@@ -95,7 +91,7 @@
 		$email2 = htmlspecialchars($_SESSION['email2']);
 		$privacy = htmlspecialchars($_SESSION['privacy']);
 
-		$to = 'shu@shucreem.com';
+		$to = 'shuichi.yukimaru@gmail.com';
 		$subject = '2019年ファン感謝企画プレゼントキャンペーン';
 		$message = '[競馬歴はどれくらいですか？]'."\n".$question_01."\n\n";
 		$message .= '[1レースあたりの馬券購入額はどれくらいですか？]'."\n".$question_02."\n\n";
